@@ -28,7 +28,8 @@
       var values = $(this).serialize();
       var posting = $.post('/products', values);
       posting.done(function(data){
-        $("#productName").text(data["name"])
+        $("#productName").text(data["name"]);
+        $("#productDescription").text(data["description"]);
       });
     });
   });
